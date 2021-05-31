@@ -24,7 +24,6 @@ class CreateTextsTable extends Migration
             $table->integer('vowels');
             $table->integer('consonants');
             $table->integer('sentences');
-            $table->integer('instancespertext');
             $table->timestamps();
         });
     }

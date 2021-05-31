@@ -9,6 +9,8 @@ class Word extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
     public function text(){
         return $this->belongsToMany(Text::class, 'text_word');
     }
