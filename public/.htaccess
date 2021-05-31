@@ -1,3 +1,15 @@
+SetEnvIf Request_URI "/$" home_uri
+
+AuthName "Log in met u DGV inlog gegevens"
+AuthType Basic
+AuthUserFile C:\xampp\htdocs\laravel\dgv-test\htpasswords\.htpasswd
+Require valid-user
+
+Deny from all
+Allow from env=home_uri
+Satisfy any
+
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
