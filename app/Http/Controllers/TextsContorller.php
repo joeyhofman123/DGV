@@ -33,7 +33,10 @@ class TextsContorller extends Controller
         $consonants = preg_match_all("/^[a|A]|[e|E]|[i|I]|[o|O]|[u|U]/", $request->text);
         $sentences =  preg_match_all("/[\.]|[\:]|[\?]|[\!]/", $request->text);
 
-        $chars = strlen($request->text);
+
+        $textlength = str_replace(' ', "", $request->text);
+
+        $chars = strlen($textlength);
 
            $text = \App\Models\Text::create([
                "title" => $request->title,
@@ -51,9 +54,17 @@ class TextsContorller extends Controller
                 $wordvowels = preg_match_all("/[a|A]|[e|E]|[i|I]|[o|O]|[u|U]/", $word);
                 $wordconsonants = preg_match_all("/^[a|A]|[e|E]|[i|I]|[o|O]|[u|U]/", $word);
 
-               $dbword = \App\Models\Word::firstOrCreate([
+                $wordcheck = \App\Models\Word::where('word', $word)->get();
+                
+                if($wordcheck->count() > 0){
+                    $updateword = $wordcheck->first();
+                    $updateword->amount_in_texts += 1;
+                    $updateword->save();
+                    continue;
+                }
+               $dbword = \App\Models\Word::create([
                    'word' => $word,
-                //    'amount_in_text' => 0,
+                   'amount_in_texts' => 1,
                    'vowels' => $wordvowels,
                    'consonants' => $wordconsonants
                ]);

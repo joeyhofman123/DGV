@@ -17,7 +17,7 @@ class CreateWordsTable extends Migration
         Schema::create('words', function (Blueprint $table) {
             $table->id();
             $table->string('word');
-            // $table->integer('amount_in_texts');
+            $table->integer('amount_in_texts');
             $table->integer('vowels');
             $table->integer('consonants');
             $table->timestamps();
