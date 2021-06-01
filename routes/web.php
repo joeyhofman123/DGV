@@ -17,5 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/dashboard', [\App\Http\Controllers\dashboardController::class , 'index']);
+
 Route::get('/dashboard/teksten/create', [\App\Http\Controllers\TextsContorller::class, 'create'])->name('dashboard.teksten.create');
 Route::post('/dashboard/teksten/store', [\App\Http\Controllers\TextsContorller::class, 'store'])->name('dashboard.teksten.store');
+
+
+

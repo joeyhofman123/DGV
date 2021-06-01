@@ -2,8 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Verbind u bedrijf met duizenden verk zoekenden bij Powerjobs">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,25 +19,26 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-primary-blue">
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                    <ul class="navbar-nav ml-auto">
-                       <li class="nav-item">
-                        <a class="w-100 text-white btn btn-success mr-2" href="{{ route('dashboard.teksten.index') }}">leden</a>
-                       </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+<body>
+<div id="app">
 
-        <main class="my-5 py-5">
-            @yield('content')
-        </main>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link ext-white btn btn-primary mr-2 " href="dashboard"> Leden <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+        </div>
+    </nav>
+</div>
+
 </body>
 </html>
