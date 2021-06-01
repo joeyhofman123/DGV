@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function(){
-    return 'dashboard';
-});
+
+
+Route::get('/dashboard', [
+    \App\Http\Controllers\dashboardController::class ,
+    'index',
+    ]);

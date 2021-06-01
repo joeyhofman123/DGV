@@ -1,3 +1,7 @@
+@extends('layouts.app')
+
+
+
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -22,9 +26,9 @@
 </head>
 <body class="bg-primary-blue">
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm fixed-top">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mt-auto pt-4 ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand " href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
 
@@ -49,12 +53,19 @@
                     </li>
                  </ul>
                 </div>
+                <div>
+
+
             </div>
         </nav>
 
-        <main class="my-5 py-5">
+        <main class="my-3 py-3">
+
+
             @yield('content')
         </main>
     </div>
+
+
 </body>
 </html>

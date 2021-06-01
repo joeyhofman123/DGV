@@ -1,0 +1,29 @@
+[33mcommit c730a99be8cbcedc81ab1425f4cfb7038827c2d4[m[33m ([m[1;36mHEAD -> [m[1;32mdashboard-controller[m[33m, [m[1;32mmain[m[33m)[m
+Author: joeyhofman123 <joeyhofman1@gmail.com>
+Date:   Mon May 31 14:33:16 2021 +0200
+
+    layouts toegevoegd
+
+[33mcommit d48d136dd9abbdb9035002324d93906e3f7eb1c0[m
+Author: joeyhofman123 <joeyhofman1@gmail.com>
+Date:   Mon May 31 13:35:16 2021 +0200
+
+    migrations en model relaties toegevoegd
+
+[33mcommit d3d06cf22dc28b7c97bfcfcd790bfcd773f2c63f[m
+Author: joeyhofman123 <joeyhofman1@gmail.com>
+Date:   Mon May 31 13:02:08 2021 +0200
+
+    htpasswd login toegevoegd
+
+[33mcommit 71bc35b8c40f5f9e664c185465da616f52badb4e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: joeyhofman123 <joeyhofman1@gmail.com>
+Date:   Mon May 31 10:25:16 2021 +0200
+
+    initial commit
+
+[33mcommit 0243cadbe44053f09b51a8d49e13a35c1a9287af[m
+Author: joeyhofman123 <joeyhofman1@gmail.com>
+Date:   Mon May 31 10:04:51 2021 +0200
+
+    Initial commit
