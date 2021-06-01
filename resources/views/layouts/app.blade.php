@@ -20,10 +20,13 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+<div class="container">
 <div id="app">
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
+        <a class="navbar-brand" href="{{ url('/') }}">
+            De geletterde vrinden
+        </a>
+        <div class="container-fluid">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto ">
                 <li class="nav-item active">
-                    <a class="nav-link ext-white btn btn-primary mr-2 " href="dashboard"> Leden <span class="sr-only">(current)</span></a>
+                    <a class="nav-link ext-white btn btn-primary px-4 text-white" href="dashboard"> Leden <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
 
@@ -39,6 +42,9 @@
         </div>
     </nav>
 </div>
+</div>
+
+@yield('content')
 
 </body>
 </html>
