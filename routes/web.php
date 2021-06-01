@@ -21,6 +21,9 @@ Route::get('/dashboard', [\App\Http\Controllers\dashboardController::class , 'in
 
 Route::get('/dashboard/teksten/create', [\App\Http\Controllers\TextsContorller::class, 'create'])->name('dashboard.teksten.create');
 Route::post('/dashboard/teksten/store', [\App\Http\Controllers\TextsContorller::class, 'store'])->name('dashboard.teksten.store');
+Route::get('/dashboard/teksten/recent', [\App\Http\Controllers\TextsContorller::class, 'recent'])->name('dashboard.teksten.recent');
+Route::get('/dashboard/teksten/langste', [\App\Http\Controllers\TextsContorller::class, 'longest'])->name('dashboard.teksten.langste');
+Route::get('/dashboard/teksten/kortste', [\App\Http\Controllers\TextsContorller::class, 'shortest'])->name('dashboard.teksten.kortste');
 
 
 

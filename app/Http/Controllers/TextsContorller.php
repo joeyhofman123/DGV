@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Text;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -74,5 +75,20 @@ class TextsContorller extends Controller
        });
 
        return redirect('/');
+    }
+
+    public function recent(){
+        $tekst = \App\Models\Text::orderBy('created_at', 'DESC')->limit(1)->first();
+        return view('dashboard.teksten.show', compact('tekst'));
+    }
+
+    public function longest(){
+        $tekst = \App\Models\Text::orderBy('characters', 'DESC')->limit(1)->first();
+        return view('dashboard.teksten.show', compact('tekst'));
+    }
+
+    public function shortest(){
+        $tekst = \App\Models\Text::orderBy('characters', 'ASC')->limit(1)->first();
+        return view('dashboard.teksten.show', compact('tekst'));
     }
 }
