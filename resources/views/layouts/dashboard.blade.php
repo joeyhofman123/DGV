@@ -30,17 +30,17 @@
 
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item">
-                     <a class="nav-link mr-2" href="#">alle teksten</a>
+                     <a class="nav-link mr-2" href="{{route('dashboard.teksten.alle')}}">alle teksten</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-2" href="#">langste tekst</a>
+                        <a class="nav-link mr-2" href="{{route('dashboard.teksten.langste')}}">langste tekst</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mr-2" href="#">kortste tekst</a>
+                        <a class="nav-link mr-2" href="{{route('dashboard.teksten.kortste')}}">kortste tekst</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link mr-2" href="#">meest recente tekst</a>
+                        <a class="nav-link mr-2" href="{{route('dashboard.teksten.recent')}}">meest recente tekst</a>
                     </li>
                  </ul>
                  <ul class="navbar-nav ml-auto">

@@ -22,7 +22,7 @@ class TextsContorller extends Controller
             'text' => ['required', 'max:500', 'string']
         ]);
 
-        
+
 
 
        DB::transaction(function() use ($request){
@@ -56,7 +56,7 @@ class TextsContorller extends Controller
                 $wordconsonants = preg_match_all("/^[a|A]|[e|E]|[i|I]|[o|O]|[u|U]/", $word);
 
                 $wordcheck = \App\Models\Word::where('word', $word)->get();
-                
+
                 if($wordcheck->count() > 0){
                     $updateword = $wordcheck->first();
                     $updateword->amount_in_texts += 1;
@@ -89,6 +89,10 @@ class TextsContorller extends Controller
 
     public function shortest(){
         $tekst = \App\Models\Text::orderBy('characters', 'ASC')->limit(1)->first();
+        return view('dashboard.teksten.show', compact('tekst'));
+    }
+    public function show($text){
+        $tekst = \App\Models\Text::all('title' ,  'text');
         return view('dashboard.teksten.show', compact('tekst'));
     }
 }

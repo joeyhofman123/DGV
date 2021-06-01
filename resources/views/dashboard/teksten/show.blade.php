@@ -11,5 +11,7 @@
                 {{ $tekst->text }}
             </div>
         </div>
+
+
     </div>
 @endsection
