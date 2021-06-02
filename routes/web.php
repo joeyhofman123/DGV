@@ -27,4 +27,4 @@ Route::get('/dashboard/teksten/langste', [\App\Http\Controllers\TextsContorller:
 Route::get('/dashboard/teksten/kortste', [\App\Http\Controllers\TextsContorller::class, 'shortest'])->name('dashboard.teksten.kortste');
 Route::get('/dashboard/teksten/', [\App\Http\Controllers\TextsContorller::class, 'index'])->name('dashboard.teksten.alle');
 
-
+Route::get('/dashboard/woorden/{id}', [\App\Http\Controllers\WordsContorller::class, 'show'])->name('dashboard.woorden.show');
