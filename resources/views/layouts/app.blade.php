@@ -34,7 +34,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto ">
                 <li class="nav-item active">
-                    <a class="nav-link ext-white btn btn-primary px-4 text-white" href="dashboard"> Leden <span class="sr-only">(current)</span></a>
+                    <a class="nav-link ext-white btn btn-primary px-4 text-white" href="{{route('dashboard.teksten.alle')}}"> Leden <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
 
