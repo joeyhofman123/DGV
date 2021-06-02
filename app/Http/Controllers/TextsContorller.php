@@ -102,7 +102,8 @@ class TextsContorller extends Controller
     }
 
     public function textsWithWord($id){
-        $teksten = \App\Models\Word::findOrFail($id)->texts()->paginate(3);
+        $word = \App\Models\Word::findOrFail($id);
+        $teksten = \App\Models\Text::where('text', 'LIKE', "%".$word->word."%")->paginate(3);
         return view('dashboard.teksten.woordintekst', compact('teksten'));
     }
 
