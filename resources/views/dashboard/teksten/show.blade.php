@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="container">
-    @foreach($tekst as $tekst)
     <div class="row ml-5 mt-5 border-bottom border-dark pb-5">
         <div class="col-md-1 ml-5"></div>
         <div class="col-md-6 ml-5">
@@ -65,9 +64,7 @@
 
                 </div>
         </div>
-
 </div>
-@endforeach
 @endsection
 
 
