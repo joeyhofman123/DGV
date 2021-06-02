@@ -91,8 +91,11 @@ class TextsContorller extends Controller
         $tekst = \App\Models\Text::orderBy('characters', 'ASC')->limit(1)->first();
         return view('dashboard.teksten.show', compact('tekst'));
     }
-    public function show($text){
-        $tekst = \App\Models\Text::all('title' ,  'text');
+
+    public function all(){
+        $tekst = \App\Models\Text::latest()->get();
         return view('dashboard.teksten.show', compact('tekst'));
     }
+
+
 }
