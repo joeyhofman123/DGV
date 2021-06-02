@@ -25,6 +25,6 @@ Route::post('/dashboard/teksten/store', [\App\Http\Controllers\TextsContorller::
 Route::get('/dashboard/teksten/recent', [\App\Http\Controllers\TextsContorller::class, 'recent'])->name('dashboard.teksten.recent');
 Route::get('/dashboard/teksten/langste', [\App\Http\Controllers\TextsContorller::class, 'longest'])->name('dashboard.teksten.langste');
 Route::get('/dashboard/teksten/kortste', [\App\Http\Controllers\TextsContorller::class, 'shortest'])->name('dashboard.teksten.kortste');
-Route::get('/dashboard/teksten/alle', [\App\Http\Controllers\TextsContorller::class, 'all'])->name('dashboard.teksten.alle');
+Route::get('/dashboard/teksten/', [\App\Http\Controllers\TextsContorller::class, 'index'])->name('dashboard.teksten.alle');
 
 
