@@ -71,6 +71,15 @@ class TextsContorller extends Controller
                    'consonants' => $wordconsonants
                ]);
 
+
+
+               foreach(str_split($dbword->word, 1) as $char){
+               \App\Models\Char::create([
+                   'char' => $char,
+                   'word_id' => $dbword->id
+               ]);
+            }
+
                $text->words()->attach($dbword->id);
            }
        });

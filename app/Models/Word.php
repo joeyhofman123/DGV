@@ -14,4 +14,8 @@ class Word extends Model
     public function text(){
         return $this->belongsToMany(Text::class, 'text_word');
     }
+
+    public function chars(){
+        return $this->hasMany(Char::class);
+    }
 }

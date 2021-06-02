@@ -13,7 +13,7 @@ class CreateWordCharTable extends Migration
      */
     public function up()
     {
-        Schema::create('word_char', function (Blueprint $table) {
+        Schema::create('chars', function (Blueprint $table) {
             $table->id();
             $table->foreignId('word_id')->constrained();
             $table->char('char');
