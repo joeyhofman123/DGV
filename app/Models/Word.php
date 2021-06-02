@@ -18,4 +18,5 @@ class Word extends Model
     public function chars(){
         return $this->hasMany(Char::class);
     }
+
 }
