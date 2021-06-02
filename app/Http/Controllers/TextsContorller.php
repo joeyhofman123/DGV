@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class TextsContorller extends Controller
 {
     public function index(){
-        $teksten = \App\Models\Text::paginate(3);
+        $teksten = \App\Models\Text::orderBy('created_at','DESC')->paginate(3);
         return view('dashboard.teksten.index', compact('teksten'));
     }
 
