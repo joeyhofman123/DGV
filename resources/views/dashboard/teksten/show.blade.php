@@ -9,7 +9,9 @@
                 <div class="panel text-center table-dark">
                             <div class="row">
                                 <div class="col-sm-9">
-                                    <h1>{{$tekst->title}}</h1>
+                                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                                        Statistieken
+                                    </button>
                                 </div>
                                 <div class="col-sm-9">
                                 </div>
@@ -28,26 +30,51 @@
 
 
                 </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h6 class="float-sm-left pt-3">
-                        <small><em>
-                                Letters:{{$tekst->characters}}
 
-                               Hoofdletters: {{$tekst->uppercase}}
 
-                               Kleinletters {{$tekst->uppercase}}
 
-                                Klinkers:{{$tekst->vowels}}
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
 
-                                Zinnen: {{$tekst->sentences}}
+                        <div class="modal-body">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h6 class="float-sm-left pt-3">
+                                        <small><em>
+                                                Letters:{{$tekst->characters}}
+                                                <br>
+                                                Hoofdletters: {{$tekst->uppercase}}
+                                                <br>
+                                                Kleinletters {{$tekst->uppercase}}
+                                                <br>
+                                                Klinkers:{{$tekst->vowels}}
+                                                <br>
+                                                Zinnen: {{$tekst->sentences}}
+                                                <br>
+                                                Medeklinkers: {{$tekst->consonants}}
 
-                                Medeklinkers: {{$tekst->consonants}}
+                                            </em></small>
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
 
-                            </em></small>
-                    </h6>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
 
                 <div class="panel">
                     <div class="panel-bottom">
