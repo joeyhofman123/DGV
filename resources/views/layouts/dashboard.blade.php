@@ -48,7 +48,7 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Minste gebruikt tekens</a>
-                            <a class="dropdown-item" href="#">Meeste gebruikt tekens</a>
+                            <a class="dropdown-item" href="{{route('dashboard.meesteGebruiktTekens')}}">Meeste gebruikt tekens</a>
                         </div>
                  </ul>
                  <ul class="navbar-nav ml-auto">

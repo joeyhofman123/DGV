@@ -105,4 +105,12 @@ class TextsContorller extends Controller
         $teksten = \App\Models\Word::findOrFail($id)->texts()->paginate(3);
         return view('dashboard.teksten.woordintekst', compact('teksten'));
     }
+
+
+    public function meesteTekens(){
+        $tekst = \App\Models\Text::all('characters')->first();
+        return view('dashboard.teksten.show', compact('tekst'));
+
+
+    }
 }
