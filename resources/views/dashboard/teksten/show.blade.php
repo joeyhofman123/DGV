@@ -7,7 +7,9 @@
         <div class="col-md-6 ml-5">
                 <div class="panel text-center table-dark">
                             <div class="row">
+
                                 <div class="col-sm-9">
+
                                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                                         Statistieken
                                     </button>
@@ -15,6 +17,7 @@
                                 <div class="col-sm-9">
                                 </div>
                                 <div class="col-sm-3">
+
                                     <h6 class="float-sm-right">
                                         <small><em>
                                                 Posted at: {{$tekst->created_at}}
@@ -24,6 +27,8 @@
                             </div>
 
                     <div class="panel-body text-center ">
+                        <h1>{{$tekst->title}}</h1>
+
                         {{$tekst->text}}
                     </div>
 
