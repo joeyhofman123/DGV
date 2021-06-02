@@ -9,7 +9,7 @@
                 <div class="panel text-center table-dark">
                             <div class="row">
                                 <div class="col-sm-9">
-                                     <a href="#"><h2>{{$tekst->title}}</h2></a>
+                                     <a href="{{ route('dashboard.woorden.show', $tekst->id) }}"><h2>{{$tekst->title}}</h2></a>
                                 </div>
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
                                     Statistieken
@@ -31,6 +31,33 @@
 
 
                 </div>
+p
+            <div id="modal-{{ $offer->id }}" class="modal fade" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">BEVESTIGING</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Weet u zeker dat u deze vacature wilt verwijderen?. Dit verwijderd ook de sollicitaties van de sollicitanten uit het systeem.</p>
+                        </div>
+                        <div class="modal-footer">
+
+                            <form method="POST" action="{{ route('admin.joboffer.destroy', $offer->id) }}">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Verwijder</button>
+                            </form>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @foreach($teksten as $tekst)
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
@@ -41,22 +68,23 @@
                             </button>
                         </div>
 
+
                         <div class="modal-body">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <h6 class="float-sm-left pt-3">
                                         <small><em>
-                                                Letters:{{$tekst->characters}}
+                                                  Letters:{{$tekst->characters}}
                                                 <br>
-                                                Hoofdletters: {{$tekst->uppercase}}
+                                                  Hoofdletters: {{$tekst->uppercase}}
                                                 <br>
-                                                Kleinletters {{$tekst->uppercase}}
+                                                  Kleinletters {{$tekst->uppercase}}
                                                 <br>
-                                                Klinkers:{{$tekst->vowels}}
+                                                  Klinkers:{{$tekst->vowels}}
                                                 <br>
-                                                Zinnen: {{$tekst->sentences}}
+                                                 Zinnen: {{$tekst->sentences}}
                                                 <br>
-                                                Medeklinkers: {{$tekst->consonants}}
+                                                 Medeklinkers: {{$tekst->consonants}}
 
                                             </em></small>
                                     </h6>
@@ -64,13 +92,14 @@
                             </div>
                         </div>
 
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                 </div>
             </div>
+            @endforeach
 
                 <div class="panel">
                     <div class="panel-bottom">
