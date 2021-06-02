@@ -11,7 +11,7 @@ class Word extends Model
 
     protected $guarded = [];
 
-    public function text(){
+    public function texts(){
         return $this->belongsToMany(Text::class, 'text_word');
     }
 

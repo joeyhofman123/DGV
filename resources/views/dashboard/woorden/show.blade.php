@@ -17,7 +17,7 @@
                     <tbody>
                         @foreach ($woorden as $woord)
                         <tr>
-                                <td><a href="#">{{ $woord->word }}</a></td>
+                                <td><a href="{{ route('dashboard.tekstenmetwoorden', $woord->id) }}">{{ $woord->word }}</a></td>
                                 <td>{{ $woord->amount_in_texts }}</td>
                                 <td>{{ $woord->vowels }}</td>
                                 <td>{{ $woord->consonants }}</td>

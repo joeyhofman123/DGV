@@ -62,6 +62,7 @@ class TextsContorller extends Controller
                     $updateword = $wordcheck->first();
                     $updateword->amount_in_texts += 1;
                     $updateword->save();
+                    $text->words()->attach($updateword->id);
                     continue;
                 }
                $dbword = \App\Models\Word::create([
@@ -71,16 +72,14 @@ class TextsContorller extends Controller
                    'consonants' => $wordconsonants
                ]);
 
-
+               $text->words()->attach($dbword->id);
 
                foreach(str_split($dbword->word, 1) as $char){
-               \App\Models\Char::create([
-                   'char' => $char,
-                   'word_id' => $dbword->id
-               ]);
-            }
-
-               $text->words()->attach($dbword->id);
+                \App\Models\Char::create([
+                    'char' => $char,
+                    'word_id' => $dbword->id
+                ]);
+             }
            }
        });
 
@@ -100,5 +99,10 @@ class TextsContorller extends Controller
     public function shortest(){
         $tekst = \App\Models\Text::orderBy('characters', 'ASC')->limit(1)->first();
         return view('dashboard.teksten.show', compact('tekst'));
+    }
+
+    public function textsWithWord($id){
+        $teksten = \App\Models\Word::findOrFail($id)->texts()->paginate(3);
+        return view('dashboard.teksten.woordintekst', compact('teksten'));
     }
 }
