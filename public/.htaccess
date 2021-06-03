@@ -1,14 +1,12 @@
-SetEnvIfNoCase Request_URI "^/dashboard" noauth
+SetEnvIf Request_URI "/$" home_uri
 
 AuthName "Log in met u DGV inlog gegevens"
 AuthType Basic
-AuthUserFile C:\xampp2\htdocs\DGV\htpasswords\.htpasswd
+AuthUserFile C:\xampp\htdocs\laravel\dgv-examen\dgv-examen\examen\DGV\htpasswords\.htpasswd
 Require valid-user
 
-Order Deny,Allow
 Deny from all
-Allow from env=noauth
-
+Allow from env=home_uri
 Satisfy any
 
 
