@@ -4,26 +4,28 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                woorden in tekst
+                alle woorden
             </div>
             <div class="card-body">
                 <table class="table">
                     <tr>
-                        <th>Woorden</th>
-                        <th>Aantal</th>
-
+                        <th>woord</th>
+                        <th>voorkomsten in teksten</th>
+                        <th>voorkomsten in totaal</th>
+                        <th>klinkers</th>
+                        <th>medeklinkers</th>
                     </tr>
                     <tbody>
-                    @foreach ($woorden as $woord)
-
+                        @foreach ($woorden as $woord)
                         <tr>
-                            <td>{{$woord->word}}</td>
-                            <td>{{ $woord->amount_in_texts }}</td>
-
-
-                        </tr>
-                    @endforeach
-                     </tbody>
+                                <td><a href="{{ route('dashboard.tekstenmetwoorden', $woord->id) }}">{{ $woord->word }}</a></td>
+                                <td>{{ $woord->amount_in_texts }}</td>
+                                <td>{{ \App\Models\TextWord::where('word_id', $woord->id)->count() }}</td>
+                                <td>{{ $woord->vowels }}</td>
+                                <td>{{ $woord->consonants }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
                 </table>
             </div>
         </div>
