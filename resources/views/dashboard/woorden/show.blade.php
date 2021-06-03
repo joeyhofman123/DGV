@@ -11,7 +11,6 @@
                     <tr>
                         <th>woord</th>
                         <th>voorkomsten in teksten</th>
-                        <th>voorkomsten in totaal</th>
                         <th>klinkers</th>
                         <th>medeklinkers</th>
                     </tr>
@@ -20,7 +19,6 @@
                         <tr>
                                 <td><a href="{{ route('dashboard.tekstenmetwoorden', $woord->id) }}">{{ $woord->word }}</a></td>
                                 <td>{{ $woord->amount_in_texts }}</td>
-                                <td>{{ \App\Models\TextWord::where('word_id', $woord->id)->count() }}</td>
                                 <td>{{ $woord->vowels }}</td>
                                 <td>{{ $woord->consonants }}</td>
                             </tr>
