@@ -45,19 +45,10 @@
                     <li class="nav-item">
                         <a class="nav-link mr-2" href="{{ route('dashboard.woorden.index') }}">Alle Woorden</a>
                     </li>
-
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Statistieken
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Minste gebruikt tekens</a>
-                            <a class="dropdown-item" href="#">Meeste gebruikt tekens</a>
-                        </div>
                  </ul>
                  <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                     <a class="w-100 text-white btn btn-success mr-2" href="{{ route('dashboard.teksten.create') }}">Tekst toevoegen</a>
+                    <li class="nav-item mx-2">
+                     <a class="w-100 text-white btn btn-success" href="{{ route('dashboard.teksten.create') }}">Tekst toevoegen</a>
 
                     </li>
 
