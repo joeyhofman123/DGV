@@ -14,4 +14,9 @@ class Char extends Model
     public function word(){
         return $this->belongsTo(Word::class);
     }
+
+
+
 }
+
+

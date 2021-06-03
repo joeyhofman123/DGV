@@ -56,7 +56,7 @@
                                                 <br>
                                                 Hoofdletters: {{$tekst->uppercase}}
                                                 <br>
-                                                Kleinletters {{$tekst->uppercase}}
+                                                Kleinletters {{$tekst->lowercase}}
                                                 <br>
                                                 Klinkers:{{$tekst->vowels}}
                                                 <br>
