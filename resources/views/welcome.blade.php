@@ -12,5 +12,6 @@
             <h1 class="text-center">Lid worden</h1>
             <p class="mx-auto" style="width: 60%;"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus ante mauris, vitae aliquam orci hendrerit sit amet. Duis sem dui, semper sed vehicula vitae, convallis sit amet nisi. Suspendisse potenti. Aliquam dignissim felis a imperdiet consequat. Suspendisse auctor convallis blandit. Nulla blandit orci id dapibus rutrum. Duis vestibulum felis lorem, non mattis magna semper ut. Duis gravida sapien eros, ut fringilla turpis efficitur in. Maecenas maximus molestie erat, vitae tempor arcu volutpat at. Nullam eu augue vel mi laoreet fermentum ac non risus. Nulla facilisi. Donec egestas blandit nisl, sit amet semper massa fringilla nec. Nunc eleifend odio quis elit aliquet feugiat. Vestibulum ac rhoncus erat. Ut luctus sed nulla ac congue. Aliquam ac neque quis ipsum pretium dictum. <a href="mailTo: info@dgv.nl">Klik hier om lid te worden</a>
             </p>
+
         </div>
 @endsection

@@ -26,9 +26,7 @@ Route::get('/dashboard/teksten/recent', [\App\Http\Controllers\TextsContorller::
 Route::get('/dashboard/teksten/langste', [\App\Http\Controllers\TextsContorller::class, 'longest'])->name('dashboard.teksten.langste');
 Route::get('/dashboard/teksten/kortste', [\App\Http\Controllers\TextsContorller::class, 'shortest'])->name('dashboard.teksten.kortste');
 Route::get('/dashboard/teksten/', [\App\Http\Controllers\TextsContorller::class, 'index'])->name('dashboard.teksten.alle');
-
 Route::get('/dashboard/woorden/{id}', [\App\Http\Controllers\WordsContorller::class, 'show'])->name('dashboard.woorden.show');
 Route::get('/dashboard/tekstenmetwoord/{id}', [\App\Http\Controllers\TextsContorller::class, 'textsWithWord'])->name('dashboard.tekstenmetwoorden');
+Route::get('/dashboard/teksten/allewoorden', [\App\Http\Controllers\WordsContorller::class, 'index'])->name('dashboard.teksten.allewoorden');
 
-
-Route::get('/dashboard/', [\App\Http\Controllers\TextsContorller::class, 'meesteTekens'])->name('dashboard.meesteGebruiktTekens');

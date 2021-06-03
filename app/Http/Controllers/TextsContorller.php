@@ -108,10 +108,6 @@ class TextsContorller extends Controller
     }
 
 
-    public function meesteTekens(){
-        $tekst = \App\Models\Text::all('characters')->first();
-        return view('dashboard.teksten.show', compact('tekst'));
 
 
-    }
 }
