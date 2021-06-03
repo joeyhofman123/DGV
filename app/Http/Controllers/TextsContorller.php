@@ -83,7 +83,7 @@ class TextsContorller extends Controller
            }
        });
 
-       return redirect('/');
+       return redirect('/dashboard/teksten');
     }
 
     public function recent(){
@@ -92,12 +92,12 @@ class TextsContorller extends Controller
     }
 
     public function longest(){
-        $tekst = \App\Models\Text::orderBy('characters', 'DESC')->limit(1)->first();
+        $tekst = \App\Models\Text::orderBy('characters', 'DESC')->orderby('created_at', 'DESC')->limit(1)->first();
         return view('dashboard.teksten.show', compact('tekst'));
     }
 
     public function shortest(){
-        $tekst = \App\Models\Text::orderBy('characters', 'ASC')->limit(1)->first();
+        $tekst = \App\Models\Text::orderBy('characters', 'ASC')->orderBy('created_at', 'DESC')->limit(1)->first();
         return view('dashboard.teksten.show', compact('tekst'));
     }
 

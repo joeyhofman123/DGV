@@ -17,6 +17,7 @@
                     <tbody>
                         @foreach ($woorden as $woord)
                         <tr>
+
                                 <td><a href="{{ route('dashboard.tekstenmetwoorden', $woord->id) }}">{{ $woord->word }}</a></td>
                                 <td>{{ \App\Models\TextWord::where('word_id', $woord->id)->count() }}</td>
                                 <td>{{ $woord->vowels }}</td>
