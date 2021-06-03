@@ -45,6 +45,7 @@
                     <li class="nav-item">
                         <a class="nav-link mr-2" href="{{route('dashboard.teksten.allewoorden')}}">Alle Woorden</a>
                     </li>
+
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Statistieken

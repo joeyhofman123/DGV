@@ -18,7 +18,7 @@
 
                         <tr>
                             <td>{{$woord->word}}</td>
-                            <td>{{ $woord->amount_in_texts }}</td>
+                            <td>{{$woord->amount_in_texts }}</td>
 
 
                         </tr>

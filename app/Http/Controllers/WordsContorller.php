@@ -16,7 +16,6 @@ class WordsContorller extends Controller
 
     public function index(){
         $woorden = \App\Models\Word::orderby('word', 'asc')->orderby('amount_in_texts', 'asc')->get();
-
         return view('dashboard.woorden.index', compact('woorden'));
 
 
